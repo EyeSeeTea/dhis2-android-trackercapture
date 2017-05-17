@@ -1,0 +1,8 @@
+[submodule "legacy-tracker_sdk"]
+	path = legacy-tracker_sdk
+	url = https://github.com/EyeSeeTea/dhis2-android-sdk
+	branch = legacy-tracker
+[submodule "tracker-capture_sdk"]
+	path = tracker-capture_sdk
+	url = https://github.com/EyeSeeTea/dhis2-android-sdk
+	branch = tracker-capture
