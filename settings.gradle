@@ -1,4 +1,4 @@
 include ':app', ':core', ':ui', ':utils'
-project(':core').projectDir = new File(settingsDir, '../dhis2-android-sdk/core')
-project(':ui').projectDir = new File(settingsDir, '../dhis2-android-new-sdk/ui')
-project(':utils').projectDir = new File(settingsDir, '../dhis2-android-new-sdk/utils')
+project(':core').projectDir = new File(settingsDir, 'tracker-capture_sdk/core')
+project(':ui').projectDir = new File(settingsDir, 'legacy-tracker_sdk/ui')
+project(':utils').projectDir = new File(settingsDir, 'legacy-tracker_sdk/utils')
