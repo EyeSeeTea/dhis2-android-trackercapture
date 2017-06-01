@@ -183,12 +183,6 @@ public class QueryTrackedEntityInstancesDialogFragment extends DialogFragment
             }
         });
 
-        closeDialogButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dismiss();
-            }
-        });
 
         //loadDialogButton.setOnClickListener(this);
 
