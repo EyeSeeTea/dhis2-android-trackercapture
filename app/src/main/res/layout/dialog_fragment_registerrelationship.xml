@@ -98,15 +98,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:weightSum="1">
 
         <org.hisp.dhis.android.sdk.ui.views.FontTextView
             android:id="@+id/tei_label"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="0.7"
             android:ellipsize="end"
             android:gravity="center_vertical"
             android:padding="16dp"
+            android:paddingLeft="4dp"
             android:singleLine="true"
             android:textAllCaps="true"
             android:textSize="19sp"
@@ -119,6 +122,8 @@
             android:ellipsize="end"
             android:gravity="center_vertical"
             android:padding="16dp"
+            android:paddingRight="4dp"
+            android:paddingLeft="4dp"
             android:singleLine="true"
             android:textAllCaps="true"
             android:textSize="19sp"
@@ -126,9 +131,8 @@
             app:font="@string/condensed_font_name"/>
 
         <Spinner
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:gravity="center_vertical"
             android:id="@+id/spinner"
             android:layout_gravity="right|center_horizontal" />
