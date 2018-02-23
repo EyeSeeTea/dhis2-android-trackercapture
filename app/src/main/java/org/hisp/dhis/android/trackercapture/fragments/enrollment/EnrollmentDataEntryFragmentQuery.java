@@ -169,19 +169,25 @@ class EnrollmentDataEntryFragmentQuery implements Query<EnrollmentDataEntryFragm
                 isRadioButton = programTrackedEntityAttributes.get(
                         i).isRenderOptionsAsRadio();
             }
-            Row row = DataEntryRowFactory.createDataEntryView(
-                    programTrackedEntityAttributes.get(i).getMandatory(),
-                    programTrackedEntityAttributes.get(i).getAllowFutureDate(),
-                    programTrackedEntityAttributes.get(
-                            i).getTrackedEntityAttribute().getOptionSet(),
-                    programTrackedEntityAttributes.get(i).getTrackedEntityAttribute().getName(),
-                    getTrackedEntityDataValue(programTrackedEntityAttributes.get(i).
-                            getTrackedEntityAttribute().getUid(), trackedEntityAttributeValues),
-                    programTrackedEntityAttributes.get(
-                            i).getTrackedEntityAttribute().getValueType(),
-                    editable, shouldNeverBeEdited, isRadioButton);
-            dataEntryRows.add(row);
+
+            if(programTrackedEntityAttributes.get(i).
+                    getTrackedEntityAttribute().getUid() != null) {
+                TrackedEntityAttributeValue trackedEntityAttributeValue = getTrackedEntityDataValue(programTrackedEntityAttributes.get(i).
+                        getTrackedEntityAttribute().getUid(), trackedEntityAttributeValues);
+                Row row = DataEntryRowFactory.createDataEntryView(
+                        programTrackedEntityAttributes.get(i).getMandatory(),
+                        programTrackedEntityAttributes.get(i).getAllowFutureDate(),
+                        programTrackedEntityAttributes.get(
+                                i).getTrackedEntityAttribute().getOptionSet(),
+                        programTrackedEntityAttributes.get(i).getTrackedEntityAttribute().getName(),
+                        trackedEntityAttributeValue,
+                        programTrackedEntityAttributes.get(
+                                i).getTrackedEntityAttribute().getValueType(),
+                        editable, shouldNeverBeEdited, isRadioButton);
+                dataEntryRows.add(row);
+            }
         }
+        
         for (TrackedEntityAttributeValue trackedEntityAttributeValue :
                 trackedEntityAttributeValues) {
             mForm.getTrackedEntityAttributeValueMap().put(
