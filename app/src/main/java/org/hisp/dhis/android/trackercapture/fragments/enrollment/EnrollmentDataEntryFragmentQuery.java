@@ -85,6 +85,9 @@ class EnrollmentDataEntryFragmentQuery implements Query<EnrollmentDataEntryFragm
         }
 
         if (mTrackedEntityInstanceId < 0) {
+            if(mProgram.getTrackedEntity()==null){
+                return mForm;
+            }
             currentTrackedEntityInstance = new TrackedEntityInstance(mProgram, mOrgUnitId);
         } else {
             currentTrackedEntityInstance = TrackerController.getTrackedEntityInstance(
