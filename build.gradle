@@ -38,13 +38,13 @@ ext {
 
     configuration = [
             package          : "org.hisp.dhis.android.trackercapture",
-            applicationId    : "org.hisp.dhis.android.trackercapture_dev",
+            applicationId    : "org.hisp.dhis.android.trackercapture_eyeseetea_dev",
             buildToolsVersion: "26.0.2",
             minSdkVersion    : 15,
             compileSdkVersion: 23,
             targetSdkVersion : 23,
-            versionCode      : 65,
-            versionName      : "0.5.7"
+            versionCode      : 66,
+            versionName      : "0.6.0"
     ]
 
     libraries = [
